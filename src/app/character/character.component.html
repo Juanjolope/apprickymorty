@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character</title>
+    <link rel="stylesheet" href="character.component.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img [src]="character.image" class="card-img" alt="{{ character.name }}">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ character.name }}</h5>
+                        <p class="card-text status"><small>Status: {{ character.status }}</small></p>
+                        <p class="card-text">Especie: {{ character.species }}</p>
+                        <p class="card-text">Genero: {{ character.gender }}</p>
+                        <p class="card-text">Origen: {{ character.origin.name }}</p>
+                        <p class="card-text">Localizacion: {{ character.location.name }}</p>
+                        <p class="card-text">Episodios: {{ character.episode.length }}</p>
+                        <p class="card-text created"><small>Creado: {{ character.created }}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 text-center">
+            <a routerLink="/home" class="btn btn-primary">Volver a la página principal</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
